@@ -115,13 +115,19 @@ body {
 
 h1 {
   font-family: "Rubik", sans-serif;
-  font-size: 10rem;
+  font-size: 5rem;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 10vw;
+  }
 }
 
 p, ul {
   font-family: "Playfair Display", serif;
-  font-weight: 600;
+  font-weight: 700;
+  font-style: italic;
 }
 
 /*
@@ -132,10 +138,17 @@ p, ul {
     101354-009fb7-d4e4bc-773344-ffc228
 *
 */
+/*
+    Color Palette
+*/
+/*
+    End Color Palette
+*/
 .header-container {
   max-height: 200px;
   right: 0;
   position: absolute;
+  padding-right: 80px;
 }
 .header-container .cj-logo {
   width: 150px;
@@ -146,11 +159,46 @@ p, ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 80px;
 }
-.home-container .whats-up h1:last-child {
+.home-container .whats-up h1:last-of-type {
   display: flex;
   justify-content: flex-end;
+  color: #1C3144;
+}
+.home-container .whats-up h1:last-of-type:before {
+  position: absolute;
+  margin: -5px;
+  content: "Up";
+  color: #f39237;
+}
+.home-container .im-down h1:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+  color: #f39237;
+}
+.home-container .im-down h1:last-of-type:before {
+  position: absolute;
+  margin: 5px;
+  content: "Down";
+  color: #1C3144;
+}
+.home-container .hidden-bio,
+.home-container .hidden-work {
+  position: absolute;
+  width: 250px;
+  font-size: 1.5rem;
+  display: none;
+  transition: 0.3s;
+}
+@media screen and (min-width: 1000px) {
+  .home-container .hidden-bio,
+.home-container .hidden-work {
+    font-size: 2vw;
+  }
+}
+.home-container .hidden-bio:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */
