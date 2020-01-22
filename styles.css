@@ -114,13 +114,13 @@ body {
 }
 
 h1 {
-  font-family: "Libre Baskerville";
-  font-size: 6rem;
+  font-family: "Rubik", sans-serif;
+  font-size: 10rem;
   margin-bottom: 10px;
 }
 
 p, ul {
-  font-family: "Signika Negative";
+  font-family: "Playfair Display", serif;
   font-weight: 600;
 }
 
@@ -132,42 +132,25 @@ p, ul {
     101354-009fb7-d4e4bc-773344-ffc228
 *
 */
+.header-container {
+  max-height: 200px;
+  right: 0;
+  position: absolute;
+}
+.header-container .cj-logo {
+  width: 150px;
+}
+
 .home-container {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
 }
-.home-container * {
-  display: block;
-}
-.home-container .navigation {
-  margin: 0 50px;
-}
-.home-container .navigation li {
-  cursor: pointer;
-}
-.home-container .navigation li a {
-  text-decoration: none;
-  color: black;
-}
-.home-container .navigation li:not(:last-child) {
-  margin-bottom: 20px;
-}
-.home-container .content-container {
-  width: min-content;
-}
-.home-container .content-container .hello {
-  margin-bottom: 20px;
-}
-.home-container .content-container .name {
-  margin-bottom: 15px;
-}
-.home-container .content-container .bio-content {
+.home-container .whats-up h1:last-child {
   display: flex;
-  align-items: flex-end;
-}
-.home-container .content-container .bio-content p {
-  width: 40%;
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -116,13 +116,13 @@ body {
 }
 
 h1 {
-    font-family: "Libre Baskerville";
-    font-size: 6rem;
+    font-family: "Rubik", sans-serif;
+    font-size: 10rem;
     margin-bottom: 10px;
 }
 
 p, ul {
-    font-family: "Signika Negative";
+    font-family: "Playfair Display", serif;
     font-weight: 600;
 }
 
@@ -135,49 +135,27 @@ p, ul {
 *
 */
 
+.header-container {
+    max-height: 200px;
+    right: 0;
+    position: absolute;
+
+    .cj-logo {
+        width: 150px;
+    }
+}
+
 .home-container {
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
 
-    & * {
-        display: block;
-    }
-
-    .navigation {
-        margin: 0 50px;
-
-        li {
-            cursor: pointer;
-
-            a {
-                text-decoration: none;
-                color: black;
-            }
-        }
-
-        li:not(:last-child) {
-            margin-bottom: 20px;
-        }
-    }
-
-    .content-container {
-        width: min-content;
-
-        .hello {
-            margin-bottom: 20px;
-        }
-
-        .name {
-            margin-bottom: 15px;
-        }
-        .bio-content {
+    .whats-up {
+        h1:last-child {
             display: flex;
-            align-items: flex-end;
-
-            p {
-                width: 40%;
-            }
+            justify-content: flex-end;
         }
     }
 }
