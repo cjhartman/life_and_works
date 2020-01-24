@@ -4,23 +4,24 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://unpkg.com/@reactivex/rxjs@latest/dist/global/Rx.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:500,600i,700i|Rubik:300,400,700&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:500,600i,700i,900,900i|Rubik:300,400,700&display=swap" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header class="header-container">
-            <img class="cj-logo" src="cj_logo.jpg" alt="CJ's logo">
+            <img class="cj-logo" src="SVG/cj_logo.svg" alt="CJ's logo">
         </header>
         <section class="home-container">
-            <div class="whats-up">
+            <div id="showBio" class="whats-up">
                 <h1>What's</h1>
                 <h1>Up</h1>
-                <p class="hidden-bio">is my bio. Click here to learn about me.</p>
+                <p id="hiddenBio" class="hidden-bio">is my bio. Click here to learn about me.</p>
             </div>
-            <div class="im-down">
+            <div id="showWork" class="im-down">
                 <h1>I'm</h1>
                 <h1>Down</h1> 
-                <p class="hidden-work">for freelance work.Click here to check out what I’ve done</p>
+                <p id="hiddenWork" class="hidden-work">for freelance work.Click here to check out what I’ve done</p>
             </div>
         </section>
     </body>

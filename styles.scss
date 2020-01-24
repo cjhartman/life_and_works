@@ -113,6 +113,7 @@ input, select {
 body {
     width: 100%;
     height: 100vh;
+    background-color: #fbfef9;
 }
 
 h1 {
@@ -127,7 +128,7 @@ h1 {
 
 p, ul {
     font-family: "Playfair Display", serif;
-    font-weight: 700;
+    font-weight: 900;
     font-style: italic;
 }
 
@@ -168,6 +169,12 @@ p, ul {
     justify-content: space-between;
     padding: 0 80px;
 
+    .whats-up,
+    .im-down {
+        cursor: pointer;
+        position: relative;
+    }
+
     .whats-up {
         h1:last-of-type { 
             display: flex;
@@ -204,15 +211,16 @@ p, ul {
         width: 250px;
         font-size: 1.5rem;
         display: none;
-        transition: 0.3s;
+        margin-top: 10px;
 
         @media screen and (min-width: 1000px) {
             font-size: 2vw;
         }
     }
 
-    .hidden-bio:hover {
-        opacity: 1;
+    .hidden-bio {
+        right: 0;
+        text-align: right;
     }
 }
 
