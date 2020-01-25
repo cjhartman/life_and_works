@@ -19,11 +19,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       hiddenBio.classList.add('hide-hidden-text');
     });
 
-    bio.addEventListener("click", e => {
-      bio.classList.add("transition-up");
-      work.classList.add("transition-down");
-    })
-
     //For the work side of things
     work.addEventListener('mouseenter', e => {
       hiddenWork.classList.remove('hide-hidden-text');
@@ -34,6 +29,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
       hiddenWork.classList.remove("show-hidden-text");
       hiddenWork.classList.add('hide-hidden-text');
     });
+
+    // Load a new page in place of the last one
+    bio.addEventListener("click", e => {
+      bio.classList.add("transition-up");
+      work.classList.add("transition-down");
+      
+    });
+
+    // Load a new page in place of the last one
+    work.addEventListener("click", e => {
+      bio.classList.add("transition-up");
+      work.classList.add("transition-down");
+      
+    })
 
     /*
       End Home Page functionality
