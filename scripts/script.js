@@ -3,10 +3,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     /*
       Start Home Page functionality
     */
-    
-    //For the bio side of things
     let bio = document.getElementById('showBio');
     let hiddenBio = document.getElementById("hiddenBio");
+    let work = document.getElementById('showWork');
+    let hiddenWork = document.getElementById("hiddenWork");
+    
+    //For the bio side of things
     bio.addEventListener('mouseenter', e => {
       hiddenBio.classList.remove('hide-hidden-text');
       hiddenBio.classList.add("show-hidden-text");
@@ -18,12 +20,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     bio.addEventListener("click", e => {
-      bio.classList.add("");
+      bio.classList.add("transition-up");
+      work.classList.add("transition-down");
     })
 
     //For the work side of things
-    let work = document.getElementById('showWork');
-    let hiddenWork = document.getElementById("hiddenWork");
     work.addEventListener('mouseenter', e => {
       hiddenWork.classList.remove('hide-hidden-text');
       hiddenWork.classList.add("show-hidden-text");
@@ -39,16 +40,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     */
 
     // // stop scrolling on home page
-    // function preventDefault(e) {
-    //     e = e || window.event;
-    //     if (e.preventDefault)
-    //       e.preventDefault();
-    //     e.returnValue = false;  
-    //   }
+    function preventDefault(e) {
+        e = e || window.event;
+        if (e.preventDefault)
+          e.preventDefault();
+        e.returnValue = false;  
+      }
       
-    //   document.getElementById('home').onmousewheel = function(e) { 
-    //     document.getElementById('home').scrollTop -= e. wheelDeltaY; 
-    //     preventDefault(e);
-    //   }
+      document.getElementById('home').onmousewheel = function(e) { 
+        document.getElementById('home').scrollTop -= e. wheelDeltaY; 
+        preventDefault(e);
+      }
     
 });

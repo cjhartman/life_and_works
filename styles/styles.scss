@@ -236,6 +236,20 @@ p, ul {
         transition-timing-function: 'ease-out';
         transform: translateY(-10%);
     }
+
+    .transition-up {
+        opacity: 0;
+        transition: .5s;
+        transition-timing-function: 'ease-out';
+        transform: translate(80%, -100%);
+    }
+
+    .transition-down {
+        opacity: 0;
+        transition: .5s;
+        transition-timing-function: 'ease-out';
+        transform: translate(-80%, 70%);
+    }
 }
 
 

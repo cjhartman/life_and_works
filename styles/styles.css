@@ -219,5 +219,17 @@ p, ul {
   transition-timing-function: "ease-out";
   transform: translateY(-10%);
 }
+.home-container .transition-up {
+  opacity: 0;
+  transition: 0.5s;
+  transition-timing-function: "ease-out";
+  transform: translate(80%, -100%);
+}
+.home-container .transition-down {
+  opacity: 0;
+  transition: 0.5s;
+  transition-timing-function: "ease-out";
+  transform: translate(-80%, 70%);
+}
 
 /*# sourceMappingURL=styles.css.map */
