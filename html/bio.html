@@ -3,25 +3,29 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="../scripts/script.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:500,600i,700i,900,900i|Rubik:300,400,700&display=swap" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="../styles/styles.css">
         <link type="text/css" rel="stylesheet" href="../styles/bio.css">
     </head>
     <body>
         <header class="header-container">
-            <img class="cj-logo" src="../assets/cj_logo.svg" alt="CJ's logo">
+            <img class="cj-logo" src="../assets/cj_logo.svg" alt="CJ's logo" data-tilt>
         </header>
-        <section id="home" class="home-container">
-            <div>
+        <section id="bio" class="home-container">
+            <div class="bio-container">
                 <h1>Hello</h1>
-                <p>
-                    My name is CJ Hartman. Currently, I am a Front End Developer at Woodridge Software - a digital agency.
-                    Previously, I worked for Spectrum, Sealed Air, and Empowered - a subsidiary of Aflac.
-                    In my spare time you can find me slurping ramen, making music, rock climbing, or using these dancer’s legs.
-                    Will work for flights to Japan.
+                <p class="bio-paragraph">
+                    <span>My name is CJ Hartman. Currently, I am a Front End Developer at Woodridge Software - a digital agency.</span>
+                    <span>Previously, I worked for Spectrum, Sealed Air, and Empowered - a subsidiary of Aflac.</span>
+                    <span>In my spare time you can find me slurping ramen, making music, rock climbing, or using these dancer’s legs.</span>
+                    <span>Will work for flights to Japan.</span>
                 </p>
             </div>
+            <div class="cj-container" data-tilt>
+                <img class="cj-img" src="../assets/duo_me.png" alt="CJ's logo">
+                <div class="border" data-tilt></div>
+            </div>
         </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     </body>
 </html>

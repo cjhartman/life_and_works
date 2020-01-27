@@ -146,10 +146,47 @@ p, ul {
 */
     $primary: #f39237;
     $secondary: #1C3144;
+    $accent: #E7F9A9;
 
 /*
     End Color Palette
 */
+
+
+/*
+    End Color Palette
+*/
+
+.loading-logo {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    -webkit-animation-name: animatein;
+    -webkit-animation-duration: 3.1s;
+    animation-name: animatein;
+    animation-duration: 3.1s;
+
+    img {
+        width: 400px;
+    }
+}
+
+@-webkit-keyframes animatein {
+    0% { opacity:0 } 
+    50% { opacity:1 }
+    100% { opacity:0 } 
+}
+
+@keyframes animatein { 
+    0% { opacity:0 } 
+    50% { opacity:1 }
+    100% { opacity:0 }
+}
+
+.hide-logo {
+    display: none;
+}
 
 .header-container {
     max-height: 200px;
@@ -160,6 +197,29 @@ p, ul {
     .cj-logo {
         width: 150px;
     }
+}
+
+.content-container {
+    height: 100vh;
+    display: none;
+}
+
+.slowShow {
+    display: block;
+    -webkit-animation-name: contentin;
+    -webkit-animation-duration: 1.1s;
+    animation-name: contentin;
+    animation-duration: 1.1s;
+}
+
+@-webkit-keyframes contentin {
+    0% { opacity:0 } 
+    100% { opacity:1 }
+}
+
+@keyframes contentin { 
+    0% { opacity:0 } 
+    100% { opacity:1 }
 }
 
 .home-container {
@@ -176,6 +236,10 @@ p, ul {
     }
 
     .whats-up {
+        h1:first-of-type {
+            color: $secondary;
+        }
+
         h1:last-of-type { 
             display: flex;
             justify-content: flex-end;
@@ -191,6 +255,10 @@ p, ul {
     }
 
     .im-down {
+        h1:first-of-type {
+            color: $primary;
+        }
+        
         h1:last-of-type { 
             display: flex;
             justify-content: flex-end;
@@ -238,17 +306,53 @@ p, ul {
     }
 
     .transition-up {
-        opacity: 0;
-        transition: .5s;
-        transition-timing-function: 'ease-out';
-        transform: translate(80%, -100%);
+        -webkit-animation-name: slideup;
+        -webkit-animation-duration: 1.1s;
+        animation-name: slideup;
+        animation-duration: 1.1s;
     }
 
     .transition-down {
-        opacity: 0;
-        transition: .5s;
-        transition-timing-function: 'ease-out';
-        transform: translate(-80%, 70%);
+        -webkit-animation-name: slidedown;
+        -webkit-animation-duration: 1.1s;
+        animation-name: slidedown;
+        animation-duration: 1.1s;
+    }
+
+    @-webkit-keyframes slideup {
+        0% { opacity:1 } 
+        100% { 
+            transform: translate(10%, -30%);
+            opacity:0 
+        }
+    }
+
+    @-webkit-keyframes slidedown {
+        0% { opacity:1 } 
+        100% { 
+            transform: translate(-10%, 20%); 
+            opacity:0 
+        }
+    }
+
+    @keyframes slideup {
+        0% { opacity:1 } 
+        100% { 
+            transform: translate(10%, -30%);
+            opacity:0 
+        }
+    }
+
+    @keyframes slidedown {
+        0% { opacity:1 } 
+        100% { 
+            transform: translate(-10%, 20%); 
+            opacity:0 
+        }
+    }
+
+    .hide-items {
+        display: none;
     }
 }
 
